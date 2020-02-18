@@ -29,9 +29,66 @@
 				<version>${mule.tools.version}</version>
 				<extensions>true</extensions>
 				<configuration>
-                    <copyToAppsDirectory>true</copyToAppsDirectory>
+                    <cloudHubDeployment>
+							<uri>https://anypoint.mulesoft.com</uri>
+
+						   <muleVersion>${mule.version}</muleVersion>
+
+							<username>${username}</username>
+
+							<password>${password}</password>
+
+							<applicationName>${cloudhub.application.name}</applicationName>
+
+							<environment>${environment}</environment>
+
+							<businessGroup>${business.group}</businessGroup>
+
+					</cloudHubDeployment>
 				</configuration>
-			</plugin>
+			
+
+<executions>
+
+
+<execution>
+
+<id>deploy</id>
+
+<phase>deploy</phase>
+
+
+<goals>
+
+<goal>deploy</goal>
+
+</goals>
+
+</execution>
+
+</executions>
+
+</plugin>
+
+
+<plugin>
+
+<groupId>org.mule.tools.maven</groupId>
+
+<artifactId>mule-app-maven-plugin</artifactId>
+
+<version>${mule.tools.version}</version>
+
+<extensions>true</extensions>
+
+
+<configuration>
+
+<copyToAppsDirectory>true</copyToAppsDirectory>
+
+</configuration>
+
+</plugin>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>build-helper-maven-plugin</artifactId>
