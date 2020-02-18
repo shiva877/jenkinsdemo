@@ -17,7 +17,7 @@
 <username>shivanaroju_ww</username>
 <password>Shiva@13270</password>
 <applicationName>jenkinsdemo</applicationName>
-<environment>DEV</environment>
+<environment>PROD</environment>
 <businessGroup>LnD</businessGroup>
 </properties>
 	<build>
@@ -51,7 +51,7 @@
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>build-helper-maven-plugin</artifactId>
-				<version>1.7</version>
+				<version>3.0.0</version>
 				<executions>
 					<execution>
 						<id>add-resource</id>
