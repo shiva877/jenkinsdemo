@@ -33,9 +33,9 @@
 			<muleVersion>${mule.version}</muleVersion>
 			<username>${username}</username>
 			<password>${password}</password>
-			<applicationName>${cloudhub.application.name}</applicationName>
+			<applicationName>${applicationName}</applicationName>
 			<environment>${environment}</environment>
-			<businessGroup>${business.group}</businessGroup>
+			<businessGroup>${businessGroup}</businessGroup>
 		</cloudHubDeployment>
 	</configuration>
 	<executions>
@@ -51,7 +51,7 @@
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>build-helper-maven-plugin</artifactId>
-				<version>3.0.0</version>
+				<version>1.7</version>
 				<executions>
 					<execution>
 						<id>add-resource</id>
