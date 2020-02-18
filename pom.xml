@@ -6,7 +6,7 @@
 	<artifactId>jenkinsdemo</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>mule</packaging>
-	<name>Mule jenkinsdemo Application</name>
+	<name>Mule jenkinsdemo-Shiva Application</name>
 
     <properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -20,75 +20,39 @@
 <environment>DEV</environment>
 <businessGroup>LnD</businessGroup>
 </properties>
-
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>org.mule.tools.maven</groupId>
-				<artifactId>mule-app-maven-plugin</artifactId>
-				<version>${mule.tools.version}</version>
-				<extensions>true</extensions>
-				<configuration>
-                    <cloudHubDeployment>
-							<uri>https://anypoint.mulesoft.com</uri>
-
-						   <muleVersion>${mule.version}</muleVersion>
-
-							<username>${username}</username>
-
-							<password>${password}</password>
-
-							<applicationName>${cloudhub.application.name}</applicationName>
-
-							<environment>${environment}</environment>
-
-							<businessGroup>${business.group}</businessGroup>
-
-					</cloudHubDeployment>
-				</configuration>
-			
-
-<executions>
-
-
-<execution>
-
-<id>deploy</id>
-
-<phase>deploy</phase>
-
-
-<goals>
-
-<goal>deploy</goal>
-
-</goals>
-
-</execution>
-
-</executions>
-
-</plugin>
-
-
-<plugin>
-
-<groupId>org.mule.tools.maven</groupId>
+			<groupId>org.mule.tools.maven</groupId>
 
 <artifactId>mule-app-maven-plugin</artifactId>
 
 <version>${mule.tools.version}</version>
 
 <extensions>true</extensions>
-
-
-<configuration>
-
-<copyToAppsDirectory>true</copyToAppsDirectory>
-
-</configuration>
-
+			
+				<configuration>
+                    <cloudHubDeployment>
+							<uri>https://anypoint.mulesoft.com</uri>
+							 <muleVersion>${mule.version}</muleVersion>
+							 <username>${username}</username>
+							 <password>${password}</password>
+							 <applicationName>${cloudhub.application.name}</applicationName>
+							 <environment>${environment}</environment>
+							 <businessGroup>${business.group}</businessGroup>
+					</cloudHubDeployment>
+				</configuration>
+<executions>
+	<execution>
+		<id>deploy</id>
+		<phase>deploy</phase>
+		<goals>
+			<goal>deploy</goal>
+		</goals>
+	</execution>
+</executions>
 </plugin>
+
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>build-helper-maven-plugin</artifactId>
